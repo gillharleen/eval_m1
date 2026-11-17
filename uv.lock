@@ -370,6 +370,7 @@ dependencies = [
     { name = "dbt-postgres" },
     { name = "faker" },
     { name = "psycopg2-binary" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -377,6 +378,7 @@ requires-dist = [
     { name = "dbt-postgres", specifier = ">=1.11.0" },
     { name = "faker", specifier = ">=40.54.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.13" },
+    { name = "python-dotenv", specifier = ">=1.2.4" },
 ]
 
 [[package]]

@@ -5,3 +5,5 @@ target/
 dbt_packages/
 logs/
 .DS_Store
+.env
+.user.yml
