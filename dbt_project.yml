@@ -35,9 +35,15 @@ models:
     bronze:
       +materialized: view
       +schema: bronze
+    +meta:
+        owner: harleen
     silver:
       +materialized: view
       +schema: silver
+      +meta:
+        owner: harleen
     gold:
       +materialized: view
       +schema: gold
+      +meta:
+        owner: analyticsteam
