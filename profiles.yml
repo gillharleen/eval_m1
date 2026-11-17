@@ -1,0 +1,12 @@
+eval_m1:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: harleengill
+      password: password123
+      dbname: shop_dw
+      schema: public
+      threads: 1
