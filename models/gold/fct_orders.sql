@@ -21,7 +21,10 @@ join {{ ref('silver_order_items') }} oi
     on oi.order_id = o.order_id
 
 {% if is_incremental() %}
+    {% if var('backfill_start', none) is not none %}
+where o.order_date >= '{{ var('backfill_start') }}'
+  and o.order_date <= '{{ var('backfill_end') }}'
+    {% else %}
 where o.updated_at > (select max(updated_at) from {{ this }})
-{% else %}
-where o.order_date >= '{{ var('start_date', '1900-01-01') }}'
+    {% endif %}
 {% endif %}
